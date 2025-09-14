@@ -55,13 +55,14 @@ class MainActivity : AppCompatActivity() {
             val description = jsonObject.getJSONArray("weather").getJSONObject(0).getString("description")
             val iconCode = jsonObject.getJSONArray("weather").getJSONObject(0).getString("icon")
 
+            val country = jsonObject.getJSONObject("sys").getString("country")
             val resourceName = "ic_$iconCode"
 
             val resourceId = resources.getIdentifier(resourceName, "drawable", packageName)
 
             //update views
             binding.weatherIconImageView.setImageResource(resourceId)
-            binding.cityNameTextView.text = cityName
+            binding.cityNameTextView.text = "$cityName, $country"
 //            binding.cityTemperatureTextView.text = "${temperature.toString()}\\u00B0C"
             binding.cityTemperatureTextView.text = "${temperature.toString()}°C"
             binding.weatherDescriptionTextView.text = description
