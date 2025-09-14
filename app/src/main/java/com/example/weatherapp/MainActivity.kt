@@ -14,13 +14,13 @@ import org.json.JSONObject
 import java.util.concurrent.Executors
 
 
-// API KEY = 75e37a80fa253b752fc389d8a42b8b68
+// API KEY = 
 //https://api.openweathermap.org/data/2.5/weather?q=London
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private var API_KEY = "75e37a80fa253b752fc389d8a42b8b68"
+    private var API_KEY = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
